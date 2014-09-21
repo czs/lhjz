@@ -18,7 +18,6 @@
 <script type="text/javascript" src="resources/bootstrap/js/bootstrap.min.js" charset="utf-8"></script>
 <script src="resources/scrollup/js/jquery.scrollUp.min.js" charset="utf-8"></script>
 </head>
-<body>
-
+<body>测试首页!
 </body>
 </html>
