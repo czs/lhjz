@@ -20,5 +20,6 @@
 </head>
 <body>
 	<a href="user/loginInput.do">用户登录</a>
+	<a href="landing/index.html">门户主页</a>
 </body>
 </html>
