@@ -1,278 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Landing Page Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Custom Google Web Font -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-
-    <!-- Add custom CSS here -->
-    <link href="css/custom.css" rel="stylesheet">
-    <!-- JavaScript -->
-    <script src="js/jquery-1.10.2.js"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
-
-</head>
-
-<body>
-
-	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <!-- Brand and toggle get grouped for better mobile display -->
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="#">北京立衡脊柱</a>
-  </div>
-
-  <!-- Collect the nav links, forms, and other content for toggling -->
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
-      <li><a href="#" class="scroll-link" data-id="home">主页</a></li>
-      <li><a href="#" class="scroll-link" data-id="about">关于我们</a></li>
-      <li><a href="#" class="scroll-link" data-id="services">服务</a></li>
-      <li><a href="#" class="scroll-link" data-id="contact">联系我们</a></li>
-      <li><a style="cursor:pointer;" id="loginpopup">登录 / 注册</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎 <strong>游客</strong> <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li><a href="#">我的账户</a></li>
-          <li><a href="#">交易</a></li>
-          <li class="divider"></li>
-          <li><a href="#">退出</a></li>
-        </ul>
-      </li>
-    </ul>
-    <!-- 
-    <form class="navbar-form navbar-right" role="search">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    -->
-  </div><!-- /.navbar-collapse -->
-  </nav>
-  <!-- Code for Login / Signup Popup -->
-  <!-- Modal Log in -->
-	<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
-	  <div class="modal-dialog" style="margin-top: 150px;">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	        <h4 class="modal-title" id="myModalLabel1">登录到系统</h4>
-	      </div>
-	      <div class="modal-body" id="login_details">
-	        <span> 存在一个账户吗? </span> </br></br>
-	        *<span style="font-weight:bold;">您的邮箱</span><br />
-	        <input type="text" placeholder="example@gmail.com" name="login_email" /><br /></br>
-	        *<span style="font-weight:bold;" >密码</span><br />
-	        <input type="password" placeholder="密码" name="login_password" /><br />
-	      </div>
-	      <div class="modal-footer" >
-			<input style="float: left" type="button" class="btn btn-success" value="登录" /> 
-	       <span class="fp-link"> <a href="#">忘记密码?</a></span>
-	       </br></br>
-			<span> 还不是注册用户?</span>
-			<span id="signup-link" style="cursor:pointer;" class="text-info">注册!</span>
-	      </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
- <!--Modal Login Ends -->
- <!-- Modal Sign-up Starts -->
-	<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
-	  <div class="modal-dialog" style="margin-top: 100px;">
-	    <div class="modal-content">
-	      <div class="modal-header">
-	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-	        <h4 class="modal-title" id="myModalLabel2">注册到系统</h4>
-	      </div>
-	      <div class="modal-body" id="signup_details">
-	        <span >姓名</span>
-	        <input type="text" placeholder="姓名" name="register_name" /> </br></br>
-	        *<span >邮箱</span>
-	        <input type="text" placeholder="example@gmail.com" name="register_email" /></br></br>
-	        *<span >密码</span>
-	        <input type="password" placeholder="密码" name="register_password" /></br></br>
-	        *<span >重复密码</span>
-	        <input type="password" placeholder="重复密码" name="re_register_password" />
-	      </div>
-	      <div class="modal-footer" >
-		<input style="float: left" type="button" class="btn btn-success"  value="注册" /> 
-	       <span>&nbsp;&nbsp;&nbsp; 已经注册? </span><span id="login-link" class="text-info" style="cursor:pointer;">  立即登录  </span> 
-		 </div>
-	    </div><!-- /.modal-content -->
-	  </div><!-- /.modal-dialog -->
-	</div><!-- /.modal -->
-  <!-- Modal Sign up ends! -->
-  <!-- End code for Login / Signup Popup -->
-
-    <div class="intro-header" id="home">
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators">
-					    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-					  </ol>
-					
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					    <div class="item active">
-					      <img src="img/img1.jpg" alt="First Image">
-					      <div class="carousel-caption">
-					        基础设施
-					      </div>
-					    </div>
-					    <div class="item">
-					      <img src="img/img2.jpg" alt="Second Image">
-					      <div class="carousel-caption">
-					        地理位置
-					      </div>
-					    </div>
-					    <div class="item">
-					      <img src="img/img3.jpg" alt="Third Image">
-					      <div class="carousel-caption">
-					        医疗团队
-					      </div>
-					    </div>
-					  </div>
-					
-					  <!-- Controls -->
-					  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-					    <span class="glyphicon glyphicon-chevron-left"></span>
-					  </a>
-					  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-					    <span class="glyphicon glyphicon-chevron-right"></span>
-					  </a>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
+		<title>立衡脊柱</title>
+		<!-- Bootstrap core CSS -->
+		<link href="../resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<!-- Add custom CSS here -->
+		<link href="css/custom.css" rel="stylesheet">
+		<!-- JavaScript -->
+		<script src="../resources/js/lib/jquery-1.10.2.min.js"></script>
+		<script src="../resources/bootstrap/js/bootstrap.min.js"></script>
+		<script src="js/custom.js"></script>
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				<span class="sr-only">切换导航</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+				class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">北京立衡脊柱</a>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#" class="scroll-link" data-id="home">主页</a></li>
+					<li><a href="#" class="scroll-link" data-id="about">关于我们</a></li>
+					<li><a href="#" class="scroll-link" data-id="services">服务</a></li>
+					<li><a href="#" class="scroll-link" data-id="contact">联系我们</a></li>
+					<li><a style="cursor: pointer;" id="loginpopup">登录 / 注册</a></li>
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">欢迎 <strong>游客</strong> <b
+					class="caret"></b></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">我的账户</a></li>
+						<li><a href="#">交易</a></li>
+						<li class="divider"></li>
+						<li><a href="#">退出</a></li>
+					</ul></li>
+				</ul>
+				<form class="navbar-form navbar-right" role="search">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="搜索">
 					</div>
-        
-        <!-- /.container -->
-
-    </div>
-    <!-- /.intro-header -->
-
-    <div class="content-section-a" id="about">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">关于我们
-                    <p class="lead">立衡脊柱矫正院(立衡脊柱)成立于1994年，在全国有四家分支机构，现在北京开设第一家分支机构。立衡脊柱是一家致力于治疗脊柱病以及脊柱相关疾病的一家矫正机构。我机构以平衡矫正为核心理念，利用多项专利设备以及器具，加以相关辅助疗法组合成一套综合疗法，其疗效显著，二十多年来治愈无数患者。 立衡脊柱不仅是一家严格要求自己，注重自身健康发展的机构。</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b" id="services">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <h2 class="section-heading">服务
-                    <p class="lead">立衡脊柱矫正院(立衡脊柱)成立于1994年，在全国有四家分支机构，现在北京开设第一家分支机构。立衡脊柱是一家致力于治疗脊柱病以及脊柱相关疾病的一家矫正机构。我机构以平衡矫正为核心理念，利用多项专利设备以及器具，加以相关辅助疗法组合成一套综合疗法，其疗效显著，二十多年来治愈无数患者。 立衡脊柱不仅是一家严格要求自己，注重自身健康发展的机构。</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/doge.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-b -->
-
-    <div class="content-section-a" id="contact">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <h2 class="section-heading">联系我们</h2>
-                    <form name="sentMessage" class="well" id="contactForm"  novalidate>
-		                 <div class="control-group">
-		                    <div class="controls">
-		                        <input type="text" class="form-control" placeholder="姓名" id="name" required data-validation-required-message="请输入您的姓名!" />
-		                          <p class="help-block"></p>
-		                   </div>
-		                 </div>         
-		                <div class="control-group">
-		                  <div class="controls">
-		                        <input type="email" class="form-control" placeholder="邮箱" id="email" required data-validation-required-message="请输入您的邮箱地址!" />
-		                        <p class="help-block"></p>
-		                </div>
-			            </div>         
-			                          
-			               <div class="control-group">
-			                 <div class="controls">
-			                                 <textarea rows="10" cols="100" class="form-control" placeholder="留言" id="message" required data-validation-required-message="请输入您的留言!" minlength="5" data-validation-minlength-message="最少需要输入五个字符!" maxlength="999" style="resize:none"></textarea>
-			                                 <p class="help-block"></p>
-			                </div>
-			               </div>                  
-			             <div id="success"> </div> <!-- For success/fail messages -->
-			            <button type="submit" class="btn btn-primary pull-right">发送</button><br /><br/>
-			          </form>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <!-- <img class="img-responsive" src="img/map.gif" alt="">  -->
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="list-inline">
-                        <li><a href="#home">主页</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li><a href="#about">关于</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li><a href="#services">服务</a>
-                        </li>
-                        <li class="footer-menu-divider">&sdot;</li>
-                        <li><a href="#contact">联系</a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted small">Copyright &copy; 北京立衡脊柱 2014. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer>
-
+					<button type="submit" class="btn btn-default">搜索</button>
+				</form>
+			</div>
+			<!-- /.navbar-collapse -->
+		</nav>
+		<!-- Code for Login / Signup Popup -->
+		<!-- Modal Log in -->
+		<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+			<div class="modal-dialog" style="margin-top: 150px;">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+						<h4 class="modal-title" id="myModalLabel1">登录到系统</h4>
+					</div>
+					<div class="modal-body" id="login_details">
+						<span> 存在一个账户吗? </span> </br> </br> *<span style="font-weight: bold;">您的邮箱</span><br /> <input type="text"
+						placeholder="example@gmail.com" name="login_email" /><br /></br> *<span style="font-weight: bold;">密码</span><br /> <input
+						type="password" placeholder="密码" name="login_password" /><br />
+					</div>
+					<div class="modal-footer">
+						<input style="float: left" type="button" class="btn btn-success" value="登录" /> <span class="fp-link"> <a
+					href="#">忘记密码?</a></span> </br> </br> <span> 还不是注册用户?</span> <span id="signup-link" style="cursor: pointer;" class="text-info">注册!</span>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!--Modal Login Ends -->
+	<!-- Modal Sign-up Starts -->
+	<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel2" aria-hidden="true">
+		<div class="modal-dialog" style="margin-top: 100px;">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel2">注册到系统</h4>
+				</div>
+				<div class="modal-body" id="signup_details">
+					<span>姓名</span> <input type="text" placeholder="姓名" name="register_name" /> </br> </br> *<span>邮箱</span> <input type="text"
+					placeholder="example@gmail.com" name="register_email" /></br> </br> *<span>密码</span> <input type="password"
+					placeholder="密码" name="register_password" /></br> </br> *<span>重复密码</span> <input type="password" placeholder="重复密码"
+					name="re_register_password" />
+				</div>
+				<div class="modal-footer">
+					<input style="float: left" type="button" class="btn btn-success" value="注册" /> <span>&nbsp;&nbsp;&nbsp;
+					已经注册? </span><span id="login-link" class="text-info" style="cursor: pointer;"> 立即登录 </span>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<!-- Modal Sign up ends! -->
+	<!-- End code for Login / Signup Popup -->
+	<div class="intro-header" id="home">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+				<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<img src="img/img1.jpg" alt="First Image">
+					<div class="carousel-caption">基础设施</div>
+				</div>
+				<div class="item">
+					<img src="img/img2.jpg" alt="Second Image">
+					<div class="carousel-caption">地理位置</div>
+				</div>
+				<div class="item">
+					<img src="img/img3.jpg" alt="Third Image">
+					<div class="carousel-caption">医疗团队</div>
+				</div>
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span
+				class="glyphicon glyphicon-chevron-left"></span>
+			</a> <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span
+			class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- /.intro-header -->
+<div class="content-section-a" id="about">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-6">
+				<div class="clearfix"></div>
+				<h2 class="section-heading">
+				关于我们
+				<p class="lead">立衡脊柱矫正院(立衡脊柱)成立于1994年，在全国有四家分支机构，现在北京开设第一家分支机构。立衡脊柱是一家致力于治疗脊柱病以及脊柱相关疾病的一家矫正机构。我机构以平衡矫正为核心理念，利用多项专利设备以及器具，加以相关辅助疗法组合成一套综合疗法，其疗效显著，二十多年来治愈无数患者。
+				立衡脊柱不仅是一家严格要求自己，注重自身健康发展的机构。</p>
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+				<img class="img-responsive" src="img/love.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- /.content-section-a -->
+<div class="content-section-b" id="services">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+				<h2 class="section-heading">
+				服务
+				<p class="lead">立衡脊柱矫正院(立衡脊柱)成立于1994年，在全国有四家分支机构，现在北京开设第一家分支机构。立衡脊柱是一家致力于治疗脊柱病以及脊柱相关疾病的一家矫正机构。我机构以平衡矫正为核心理念，利用多项专利设备以及器具，加以相关辅助疗法组合成一套综合疗法，其疗效显著，二十多年来治愈无数患者。
+				立衡脊柱不仅是一家严格要求自己，注重自身健康发展的机构。</p>
+			</div>
+			<div class="col-lg-5 col-sm-pull-6  col-sm-6">
+				<img class="img-responsive" src="img/love.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- /.content-section-b -->
+<div class="content-section-a" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-5 col-sm-6">
+				<h2 class="section-heading">联系我们</h2>
+				<form name="sentMessage" class="well" id="contactForm" novalidate>
+					<div class="control-group">
+						<div class="controls">
+							<input type="text" class="form-control" placeholder="姓名" id="name" required
+							data-validation-required-message="请输入您的姓名!" />
+							<p class="help-block"></p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<input type="email" class="form-control" placeholder="邮箱" id="email" required
+							data-validation-required-message="请输入您的邮箱地址!" />
+							<p class="help-block"></p>
+						</div>
+					</div>
+					<div class="control-group">
+						<div class="controls">
+							<textarea rows="10" cols="100" class="form-control" placeholder="留言" id="message" required
+							data-validation-required-message="请输入您的留言!" minlength="5" data-validation-minlength-message="最少需要输入五个字符!"
+							maxlength="999" style="resize: none"></textarea>
+							<p class="help-block"></p>
+						</div>
+					</div>
+					<div id="success"></div>
+					<!-- For success/fail messages -->
+					<button type="submit" class="btn btn-primary pull-right">发送</button>
+					<br /> <br />
+				</form>
+			</div>
+			<div class="col-lg-5 col-lg-offset-2 col-sm-6">
+				<!-- <img class="img-responsive" src="img/map.gif" alt="">  -->
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+</div>
+<!-- /.content-section-a -->
+<footer>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<ul class="list-inline">
+					<li><a href="#home">主页</a></li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li><a href="#about">关于</a></li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li><a href="#services">服务</a></li>
+					<li class="footer-menu-divider">&sdot;</li>
+					<li><a href="#contact">联系</a></li>
+				</ul>
+				<p class="copyright text-muted small">Copyright &copy; 北京立衡脊柱 2014. All Rights Reserved</p>
+			</div>
+		</div>
+	</div>
+</footer>
 </body>
-
 </html>
