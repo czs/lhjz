@@ -19,3 +19,14 @@
 .lhjz-jumbotron {
 	margin-top: 20px;
 }
+
+.lhjz-body {
+	padding-top: 50px;
+}
+
+.lhjz-map {
+	display: block;
+	width: 100% \9;
+	max-width: 100%;
+	height: auto;
+}
