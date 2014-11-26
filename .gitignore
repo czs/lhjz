@@ -215,3 +215,6 @@ pip-log.txt
 .mr.developer.cfg
 /target
 /logs
+
+.tags
+.tags_sorted_by_file
