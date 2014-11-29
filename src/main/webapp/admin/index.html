@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../landing/favicon.ico">
+    <title>Semantic 实例</title>
+    <link rel="stylesheet" href="semantic/css/semantic.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="../resources/js/lib/jquery-1.11.1.min.js"></script>
+    <script src="js/jquery.tablesort.min.js" charset="utf-8"></script>
+    <script src="semantic/javascript/semantic.js"></script>
+    <script src="js/custom.js"></script>
+</head>
+
+<body style="height: 100%; max-height: 100%; overflow: hidden;">
+
+    <!-- left sidebar -->
+    <div id="siderLeftBar" class="ui styled sidebar">
+        <div class="ui vertical menu">
+            <div class="item">
+                <div class="ui input">
+                    <input type="text" placeholder="搜索...">
+                </div>
+            </div>
+            <div class="header item">
+                <i class="user icon"></i> Communities
+            </div>
+            <div class="item">
+                College
+                <div class="menu">
+                    <a class="item">Baseball</a> <a class="item">Basketball</a> <a class="item">Golf</a>
+                </div>
+            </div>
+            <a class="item"> Dance </a> <a class="item"> Aerobics </a>
+            <div class="header item">
+                <i class="globe icon"></i> Cities
+            </div>
+            <a class="item"> New York </a> <a class="item"> Montreal </a> <a class="item"> Los Angeles </a> <a class="item">
+				San Francisco </a>
+        </div>
+    </div>
+
+    <!-- body container -->
+    <div id="container" style="height: 100%; max-height: 100%; position: relative;">
+        <!-- top fixed menu -->
+        <div id="menuTop" class="ui menu inverted" style="height: 43px; margin-top: 0; margin-bottom: 0; top: 0; border-radius: 0;">
+            <a class="item" id="btnSiderBar"> <i class="list layout icon"></i>
+            </a>
+            <a class="item">立衡脊柱</a>
+            <a class="active item"> <i class="home icon"></i> 主页
+            </a>
+            <a class="item"> <i class="mail icon"></i> 消息
+            </a>
+            <div class="ui dropdown item pointing">
+                其它 <i class="icon dropdown"></i>
+                <div class="menu">
+                    <a class="item"><i class="edit icon"></i> 菜单1</a> <a class="item"><i class="globe icon"></i> 菜单2</a> <a class="item"><i class="settings icon"></i> 菜单3</a>
+                </div>
+            </div>
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="搜索..."> <i class="search link icon"></i>
+                    </div>
+                </div>
+                <div class="ui dropdown item pointing">
+                    账户 <i class="icon dropdown"></i>
+                    <div class="menu">
+                        <a class="item"><i class="edit icon"></i> 编辑配置</a> <a class="item"><i class="globe icon"></i> 选择语言
+							</a> <a class="item"><i class="settings icon"></i> 账户设置</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- bottom fixed menu -->
+        <div id="menuBottom" class="ui menu inverted" style="height: 43px; position: absolute; bottom: 0; width: 100%; margin-bottom: 0; margin-top: 0; border-radius: 0">
+            <div class="header item">Copyright © 北京立衡脊柱 2014. 保留所有权利</div>
+            <a class="item"></a> <a class="item"></a> <a class="item"></a>
+            <div class="right menu">
+                <a class="item"></a> <a class="item"></a> <a class="item"></a>
+            </div>
+        </div>
+
+        <!-- middle body content -->
+        <div class="lhjz-body" style="position: absolute; width: 100%; overflow: auto; bottom: 43px; top: 43px;">
+
+            <!-- tool menu bar -->
+            <div class="ui menu">
+                <div class="item">
+                    <div class="ui vertical animated button small" id="btnAdd">
+                        <div class="hidden content">添加</div>
+                        <div class="visible content">
+                            <i class="add icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui vertical animated button small" id="btnUpdate">
+                        <div class="hidden content">更新</div>
+                        <div class="visible content">
+                            <i class="edit icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="ui vertical animated button small" id="btnDelete">
+                        <div class="hidden content">删除</div>
+                        <div class="visible content">
+                            <i class="delete icon"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- main content -->
+            <div class="lhjz-content" style="padding-left: 10px; padding-right: 10px; margin-bottom: 43px;">
+                <div class="ui warning message">
+                    <i class="close icon"></i>Visit our registration page, then try again
+                </div>
+                <div class="ui segment">
+                    <table class="ui celled sortable table segment">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Status</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John</td>
+                                <td>Approved</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Jamie</td>
+                                <td>Approved</td>
+                                <td>Requires call</td>
+                            </tr>
+                            <tr>
+                                <td>Jill</td>
+                                <td>Denied</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Approved</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Jamie</td>
+                                <td>Approved</td>
+                                <td>Requires call</td>
+                            </tr>
+                            <tr>
+                                <td>Jill</td>
+                                <td>Denied</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>John</td>
+                                <td>Approved</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Jamie</td>
+                                <td>Approved</td>
+                                <td>Requires call</td>
+                            </tr>
+                            <tr>
+                                <td>Jill</td>
+                                <td>Denied</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th colspan="3">
+                                    <div class="ui blue labeled icon button">
+                                        <i class="user icon"></i> Add User
+                                    </div>
+                                </th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui modal" id="modalAdd">
+        <i class="close icon"></i>
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="ui error form segment">
+                <div class="ui error message">
+                    <div class="header">Action Forbidden</div>
+                    <p>You can only sign up for an account once with a given e-mail address.</p>
+                </div>
+                <div class="two fields">
+                    <div class="field">
+                        <label>First Name</label>
+                        <input placeholder="First Name" type="text">
+                    </div>
+                    <div class="field">
+                        <label>Last Name</label>
+                        <input placeholder="Last Name" type="text">
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Gender</label>
+                    <div class="ui fluid selection dropdown">
+                        <div class="text">Select</div>
+                        <i class="dropdown icon"></i>
+                        <input type="hidden" name="gender">
+                        <div class="menu">
+                            <div class="item" data-value="male">Male</div>
+                            <div class="item" data-value="female">Female</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline field">
+                    <div class="ui checkbox">
+                        <input type="checkbox">
+                        <label>I agree to the Terms and Conditions</label>
+                    </div>
+                </div>
+                <div class="ui blue submit button">Submit</div>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui button">Okay</div>
+        </div>
+    </div>
+
+    <div class="ui modal" id="modalUpdate">
+        <i class="close icon"></i>
+        <div class="header">Header</div>
+        <div class="content">
+            <div class="left">Some content to the left, usually an image or icon</div>
+            <div class="right">Some content to the right</div>
+        </div>
+        <div class="actions">
+            <div class="ui button">Cancel</div>
+            <div class="ui button">Okay</div>
+        </div>
+    </div>
+
+    <div class="ui basic modal" id="modalDelete">
+        <div class="header">Change Your Homepage</div>
+        <div class="content">
+            <div class="left">
+                <i class="home icon"></i>
+            </div>
+            <div class="right">
+                <p>
+                    Are you sure you want to change your homepage to <b>Poodle.com</b>?
+                </p>
+            </div>
+        </div>
+        <div class="actions">
+            <div class="two fluid ui buttons">
+                <div class="ui negative labeled icon button">
+                    <i class="remove icon"></i> No
+                </div>
+                <div class="ui positive right labeled icon button">
+                    Yes <i class="checkmark icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
